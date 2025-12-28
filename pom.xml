@@ -25,11 +25,56 @@
 
     <build>
         <plugins>
+        	<!-- Plugin para ejecutar tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
             </plugin>
+            
+            <!-- Plugin Checkstyle -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-checkstyle-plugin</artifactId>
+	            <version>3.2.0</version>
+	            <executions>
+	                <execution>
+	                    <phase>verify</phase>
+	                    <goals>
+	                        <goal>checkstyle</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	            <configuration>
+	                <configLocation>google_checks.xml</configLocation>
+	                <failOnViolation>true</failOnViolation>
+	                <linkXRef>false</linkXRef>
+	            </configuration>
+	        </plugin>
+	
+	        <!-- Plugin PMD -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-pmd-plugin</artifactId>
+	            <version>3.16.0</version>
+	            <executions>
+	                <execution>
+	                    <phase>verify</phase>
+	                    <goals>
+	                        <goal>pmd</goal>
+	                        <goal>cpd-check</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	
+	        <!-- Plugin para deploy (publicación) -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-deploy-plugin</artifactId>
+	            <version>3.0.0-M1</version>
+	        </plugin>
+        
         </plugins>
     </build>
 
