@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.ucam.CalculadoraTest" time="0.046" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.ucam.BibliotecaMusicalTest" time="0.076" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\jjarr\AppData\Local\Temp\surefire8930366809839293830\surefirebooter-20251228195238505_3.jar C:\Users\jjarr\AppData\Local\Temp\surefire8930366809839293830 2025-12-28T19-52-35_537-jvmRun1 surefire-20251228195238505_1tmp surefire_0-20251228195238505_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\jjarr\AppData\Local\Temp\surefire5667048186682845977\surefirebooter-20251228233818195_3.jar C:\Users\jjarr\AppData\Local\Temp\surefire5667048186682845977 2025-12-28T23-38-17_785-jvmRun1 surefire-20251228233818195_1tmp surefire_0-20251228233818195_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\jjarr\eclipse-workspace\cs-practica-jjam\target\test-classes;C:\Users\jjarr\eclipse-workspace\cs-practica-jjam\target\classes;C:\Users\jjarr\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\jjarr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\jjarr\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jjarr\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\jjarr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jjarr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\jjarr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\jjarr\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\jjarr\AppData\Local\Temp\surefire8930366809839293830\surefirebooter-20251228195238505_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\jjarr\AppData\Local\Temp\surefire5667048186682845977\surefirebooter-20251228233818195_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+8-LTS-274"/>
@@ -51,7 +51,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin/server;C:/Program Files/Eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\AutoFirma\AutoFirma;C;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Users\jjarr\AppData\Local\Programs\Python\Launcher\;C:\Users\jjarr\AppData\Local\Microsoft\WindowsApps;C:\Users\jjarr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\jjarr\.dotnet\tools;C:\Program Files\Eclipse\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin/server;C:/Program Files/Eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\AutoFirma\AutoFirma;C;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Users\jjarr\AppData\Local\Programs\Python\Launcher\;C:\Users\jjarr\AppData\Local\Microsoft\WindowsApps;C:\Users\jjarr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\jjarr\.dotnet\tools;C:\Program Files\Eclipse\eclipse;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -59,5 +59,55 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSumar" classname="edu.ucam.CalculadoraTest" time="0.03"/>
+  <testcase name="testAssertNotSame" classname="edu.ucam.BibliotecaMusicalTest" time="0.027">
+    <system-out><![CDATA[Inicialización global completada...
+Inicio del test nº 1
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarPlaylistPorNombre" classname="edu.ucam.BibliotecaMusicalTest" time="0.002">
+    <system-out><![CDATA[Inicio del test nº 2
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testAssertSameFallido" classname="edu.ucam.BibliotecaMusicalTest" time="0.001">
+    <system-out><![CDATA[Inicio del test nº 3
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testAgregarCancion" classname="edu.ucam.BibliotecaMusicalTest" time="0.002">
+    <system-out><![CDATA[Inicio del test nº 4
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarCancionPorTitulo" classname="edu.ucam.BibliotecaMusicalTest" time="0.002">
+    <system-out><![CDATA[Inicio del test nº 5
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testRegistrarUsuario" classname="edu.ucam.BibliotecaMusicalTest" time="0.002">
+    <system-out><![CDATA[Inicio del test nº 6
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarPlaylistPorNombreFalse" classname="edu.ucam.BibliotecaMusicalTest" time="0.003">
+    <system-out><![CDATA[Inicio del test nº 7
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testAssertArrayEquals" classname="edu.ucam.BibliotecaMusicalTest" time="0.002">
+    <system-out><![CDATA[Inicio del test nº 8
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testAssertNullFallido" classname="edu.ucam.BibliotecaMusicalTest" time="0.001">
+    <system-out><![CDATA[Inicio del test nº 9
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarCancionPorArtista" classname="edu.ucam.BibliotecaMusicalTest" time="0.001">
+    <system-out><![CDATA[Inicio del test nº 10
+Estado restaurado tras el test
+]]></system-out>
+  </testcase>
 </testsuite>

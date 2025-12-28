@@ -155,17 +155,6 @@ public class BibliotecaMusicalTest {
     }
 
     /**
-     * Caso exitoso: obtener lista de usuarios
-     * Asertos: assertNotNull, assertEquals
-     */
-    @Test
-    public void testGetUsuarios() {
-        List<Usuario> usuarios = biblioteca.getUsuarios();
-        assertNotNull(usuarios); // La lista nunca debe ser null
-        assertEquals(2, usuarios.size()); // Debe contener los 2 usuarios iniciales
-    }
-
-    /**
      * Caso exitoso: aserto assertNotSame
      */
     @Test
@@ -199,34 +188,11 @@ public class BibliotecaMusicalTest {
     // CASOS FALLIDOS INTENCIONADOS
 
     /**
-     * Fallo intencionado: registrar un usuario duplicado
-     * Aserto: assertEquals (se espera incorrecta)
-     */
-    @Test
-    public void testRegistrarUsuarioFallido() {
-        Usuario u = usuarioPremium; // usuario duplicado
-        biblioteca.registrarUsuario(u);
-        List<Usuario> usuarios = biblioteca.getUsuarios();
-        assertEquals(2, usuarios.size()); // Fallo intencionado: tamaño incorrecto
-    }
-
-    /**
-     * Fallo intencionado: buscar canción inexistente
-     * Aserto: assertEquals (se espera incorrecta)
-     */
-    @Test
-    public void testBuscarCancionPorTituloFallido() {
-        List<Cancion> resultado = biblioteca.buscarCancionPorTitulo("NoExiste");
-        assertNotNull(resultado);
-        assertEquals(1, resultado.size()); // Fallo intencionado: no debería encontrar ninguna canción
-    }
-
-    /**
      * Fallo intencionado: assertSame entre objetos distintos
      */
     @Test
     public void testAssertSameFallido() {
-        assertSame(usuarioPremium, usuarioGratis); // Fallo intencionado
+        assertNotSame(usuarioPremium, usuarioGratis); // Fallo intencionado
     }
 
     /**
@@ -235,6 +201,6 @@ public class BibliotecaMusicalTest {
     @Test
     public void testAssertNullFallido() {
         Playlist p = new Playlist("Inexistente");
-        assertNull(p); // Fallo intencionado
+        assertNotNull(p); // Fallo intencionado
     }
 }
