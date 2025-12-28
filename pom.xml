@@ -22,15 +22,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
-    <distributionManagement>
-	    <repository>
-	        <id>github</id>
-	        <name>GitHub Packages</name>
-	        <url>https://maven.pkg.github.com/jjarroniz-ucam/pr4-cs-ucam-jjam-despliegue</url>
-	    </repository>
-	</distributionManagement>
-
 
     <build>
         <plugins>
