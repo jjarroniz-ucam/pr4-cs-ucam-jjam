@@ -17,7 +17,7 @@ import java.util.List;
  * - Casos exitosos (4+)
  * - Casos fallidos intencionados (4+)
  * - Uso de los 8 tipos de asertos de JUnit
- * - Uso de annotations de ciclo de vida (@BeforeClass, @AfterClass, @Before, @After)
+ * - Uso de annotations de ciclo de vida
  */
 public class BibliotecaMusicalTest {
 
@@ -192,7 +192,7 @@ public class BibliotecaMusicalTest {
      */
     @Test
     public void testAssertSameFallido() {
-        assertNotSame(usuarioPremium, usuarioGratis); // Fallo intencionado
+        assertNotSame(usuarioPremium, usuarioGratis);
     }
 
     /**
@@ -201,6 +201,6 @@ public class BibliotecaMusicalTest {
     @Test
     public void testAssertNullFallido() {
         Playlist p = new Playlist("Inexistente");
-        assertNotNull(p); // Fallo intencionado
+        assertNotNull(p);
     }
 }
