@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class BibliotecaMusical {
 
     // Lista que almacena todas las canciones del catálogo
-    private List<Cancion> catalogoCanciones
+    private List<Cancion> catalogoCanciones;
 
     // Lista que almacena todos los usuarios registrados en el sistema
     private List<Usuario> usuarios;
