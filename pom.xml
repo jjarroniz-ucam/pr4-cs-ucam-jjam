@@ -6,23 +6,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.jjarroniz-ucam</groupId>
-	<artifactId>pr4-cs-ucam-jjam</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	
-	<distributionManagement>
-	    <repository>
-	        <id>github</id>
-	        <name>GitHub Packages</name>
-	        <url>https://maven.pkg.github.com/jjarroniz-ucam/pr4-cs-ucam-jjam</url>
-	    </repository>
-	</distributionManagement>
+    <artifactId>pr4-cs-ucam-jjam</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <!-- Configuración de repositorio remoto para GitHub Packages -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/jjarroniz-ucam/pr4-cs-ucam-jjam</url>
+        </repository>
+    </distributionManagement>
 
-
+    <!-- Propiedades de compilación -->
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
+    <!-- Dependencias -->
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -32,86 +34,81 @@
         </dependency>
     </dependencies>
 
+    <!-- Plugins de construcción -->
     <build>
         <plugins>
-        	<!-- Plugin para ejecutar tests -->
+            <!-- Ejecutar tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
             </plugin>
-            
-            <!-- JaCoCo: cobertura de tests -->
-        <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.11</version>
-            <executions>
 
-                <!-- Prepara el agente antes de los tests -->
-                <execution>
-                    <id>prepare-agent</id>
-                    <goals>
-                        <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
+            <!-- Cobertura de tests -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.11</version>
+                <executions>
+                    <!-- Prepara el agente antes de tests -->
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <!-- Genera el informe tras tests -->
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-                <!-- Genera el informe después de los tests -->
-                <execution>
-                    <id>report</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>report</goal>
-                    </goals>
-                </execution>
+            <!-- Checkstyle -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>checkstyle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configLocation>google_checks.xml</configLocation>
+                    <failOnViolation>true</failOnViolation>
+                </configuration>
+            </plugin>
 
-            </executions>
-        </plugin>
-            
-            <!-- Plugin Checkstyle -->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-checkstyle-plugin</artifactId>
-	            <version>3.2.0</version>
-	            <executions>
-	                <execution>
-	                    <phase>verify</phase>
-	                    <goals>
-	                        <goal>checkstyle</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	            <configuration>
-	                <configLocation>google_checks.xml</configLocation>
-	                <failOnViolation>true</failOnViolation>
-	                <linkXRef>false</linkXRef>
-	            </configuration>
-	        </plugin>
-	
-	        <!-- Plugin PMD -->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-pmd-plugin</artifactId>
-	            <version>3.16.0</version>
-	            <executions>
-	                <execution>
-	                    <phase>verify</phase>
-	                    <goals>
-	                        <goal>pmd</goal>
-	                        <goal>cpd-check</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	        </plugin>
-	
-	        <!-- Plugin para deploy (publicación) -->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-deploy-plugin</artifactId>
-	            <version>3.0.0-M1</version>
-	        </plugin>
-        
+            <!-- PMD -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.16.0</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>pmd</goal>
+                            <goal>cpd-check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Maven Versions Plugin para gestión automática de versión -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.15.0</version>
+            </plugin>
         </plugins>
     </build>
-
 </project>
