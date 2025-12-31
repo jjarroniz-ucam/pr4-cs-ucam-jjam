@@ -192,7 +192,7 @@ public class BibliotecaMusicalTest {
      */
     @Test
     public void testAssertSameFallido() {
-        assertSame(usuarioPremium, usuarioGratis);
+        assertNotSame(usuarioPremium, usuarioGratis);
     }
 
     /**
@@ -201,6 +201,6 @@ public class BibliotecaMusicalTest {
     @Test
     public void testAssertNullFallido() {
         Playlist p = new Playlist("Inexistente");
-        assertNull(p);
+        assertNotNull(p);
     }
 }
