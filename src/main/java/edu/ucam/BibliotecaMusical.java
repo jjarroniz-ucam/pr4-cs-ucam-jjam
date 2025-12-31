@@ -18,7 +18,7 @@ public class BibliotecaMusical {
     private List<Cancion> catalogoCanciones;
 
     // Lista que almacena todos los usuarios registrados en el sistema
-    private List<Usuario> usuarios
+    private List<Usuario> usuarios;
 
     /**
      * Constructor de la clase BibliotecaMusical.
